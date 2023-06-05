@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>OnlineQuiz</display-name>
+
+  <!-- Servlet Configuration -->
+  <servlet>
+    <servlet-name>UserRegistrationServlet</servlet-name>
+    <servlet-class>com.quiz.user.UserRegistrationServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UserLoginServlet</servlet-name>
+    <servlet-class>com.quiz.user.UserLoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>QuizServlet</servlet-name>
+    <servlet-class>com.quiz.user.QuizServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>QuizAttemptServlet</servlet-name>
+    <servlet-class>com.quiz.user.QuizAttemptServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LeaderboardServlet</servlet-name>
+    <servlet-class>com.quiz.user.LeaderboardServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminLoginServlet</servlet-name>
+    <servlet-class>com.quiz.admin.AdminLoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminProfileServlet</servlet-name>
+    <servlet-class>com.quiz.admin.AdminProfileServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>QuizManagementServlet</servlet-name>
+    <servlet-class>com.quiz.admin.QuizManagementServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DashboardServlet</servlet-name>
+    <servlet-class>com.quiz.admin.DashboardServlet</servlet-class>
+  </servlet>
+
+  <!-- Servlet Mapping -->
+  <servlet-mapping>
+    <servlet-name>UserRegistrationServlet</servlet-name>
+    <url-pattern>/user/register</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserLoginServlet</servlet-name>
+    <url-pattern>/user/login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QuizServlet</servlet-name>
+    <url-pattern>/user/quiz</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QuizAttemptServlet</servlet-name>
+    <url-pattern>/user/quiz/attempt</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LeaderboardServlet</servlet-name>
+    <url-pattern>/user/leaderboard</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminLoginServlet</servlet-name>
+    <url-pattern>/admin/login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminProfileServlet</servlet-name>
+    <url-pattern>/admin/profile</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QuizManagementServlet</servlet-name>
+    <url-pattern>/admin/quiz/manage</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DashboardServlet</servlet-name>
+    <url-pattern>/admin/dashboard</url-pattern>
+  </servlet-mapping>
+
+  <!-- Welcome File -->
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
